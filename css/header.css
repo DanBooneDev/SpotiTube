@@ -1,0 +1,51 @@
+header{
+  position: fixed;
+  background-color: rgb(244, 244, 244);
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.header-left-section{
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-right-section{
+  flex-shrink: 0;
+  width: 80px;
+}
+.spotitube-button{
+  border: none;
+  cursor: pointer;
+  background-color: rgb(244, 244, 244);
+  margin-left: 20px;
+}
+.spotitube-logo{
+  width: 90px;
+}
+.hamburger-button{
+  border: none;
+  background-color: rgb(244, 244, 244);
+  cursor: pointer;
+  margin-left: 10px;
+}
+.hamburger-icon{
+  height: 25px;
+}
+.profile-image{
+  height: 36px;
+  border: none;
+  border-radius: 18px;
+}
+.profile-button{
+  flex: 1;
+  border: none;
+  background-color: rgb(244, 244, 244);
+  padding-top: 4px;
+}
