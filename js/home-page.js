@@ -14,13 +14,9 @@ const playlists_endpoint = 'https://api.spotify.com/v1/me/playlists';
 const spotify_login_button = document.getElementById("spotify-login-button");
 
 spotify_login_button.addEventListener("click", function(){
-  console.log("spotify login button pressed");
-
-  spotify_login_button.addEventListener("click", function(){
     console.log("spotify login button pressed");
     // Redirect the user to the Spotify Authorization URL
     window.location.href = `https://accounts.spotify.com/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}&scope=${scopes}&response_type=code`;
-  });
 
 });
 
