@@ -1,6 +1,3 @@
-.spotify-logo{
-  width: 140px;
-}
 .main-flex-box{
   display: flex;
   flex-direction: row;
@@ -9,34 +6,34 @@
 }
 .spotify-section{
   flex: 1;
-  border: 2px solid black;
+  border: .1rem solid black;
 }
 .youtube-section{
   flex: 1;
-  border: 2px solid black;
+  border: .1rem solid black;
 }
 .spotify-logo{
   display: block;
-  margin: 25px auto auto auto;
-  width: 200px;
+  margin: 2rem auto auto auto;
+  width: 30%;
 }
-.spotify-login-button{
+#spotify-login-button{
   display: block;
-  margin: 28px auto auto auto;
+  margin: 2rem auto auto auto;
 }
 .youtube-logo{
   display: block;
   margin: auto;
-  width: 200px;
+  width: 30%;
 }
-.youtube-login-button{ 
+#youtube-login-button{ 
   display: block;
   margin: auto;
 }
 .video-player{
   width: 75vw;
   height: 60vh;
-  border: 2px solid black;
-  margin: auto auto 20px auto;
+  border: .1rem solid black;
+  margin: auto auto 1rem auto;
   text-align: center;
 }
