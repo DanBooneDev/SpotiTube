@@ -3,7 +3,7 @@
 const access_token = '';
 
 // my redirect url
-const redirect_uri = "google.com";
+const redirect_uri = "https://danboonedev.github.io/SpotiTube/";
 const client_id = "596ac70f5b3a4b65af8f8cb2c608f90b";
 const scopes = "user-library-read";
 
