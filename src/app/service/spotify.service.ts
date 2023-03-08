@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
+import { Playlist } from '../spotify-playlist/playlist';
 
 @Injectable({
   providedIn: 'root'
@@ -46,5 +47,16 @@ export class SpotifyService {
       .set('limit', '50');
     const url = `${this.apiUrl}/me/playlists`;
     return this.http.get(url, { headers, params });
+  }
+
+  getPlaylists(): Observable<Playlist[]> {
+    return this.getUserPlaylists().pipe(
+      map((response: any) => response.items.map((item: any) => ({
+        name: item.name,
+        description: item.description,
+        author: item.owner.display_name,
+        tracks: []
+      })))
+    );
   }
 }

@@ -10,26 +10,17 @@ import { Playlist } from './playlist';
   templateUrl: './spotify-playlist.component.html',
   styleUrls: ['./spotify-playlist.component.css']
 })
-export class SpotifyPlaylistComponent{
+export class SpotifyPlaylistComponent implements OnInit {
   
   playlists$: Observable<Playlist[]> = of([]);
 
-  constructor(private spotifyService: SpotifyService) {
+  constructor(private spotifyService: SpotifyService) {}
+
+  ngOnInit() {
+    this.loadPlaylists();
   }
 
   loadPlaylists(): void {
-    this.playlists$ = this.spotifyService.getUserPlaylists().pipe(
-      map((response: any) => response.items.map((item: any) => ({
-        name: item.name,
-        description: item.description,
-        author: item.owner.display_name,
-        tracks: []
-      })))
-    );
-  
-    this.playlists$.subscribe((playlists: Playlist[]) => {
-      console.log(playlists);
-    });
+    this.playlists$ = this.spotifyService.getPlaylists();
   }
-
 }
